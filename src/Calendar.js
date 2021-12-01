@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import dateFns from 'date-fns';
+import pt from 'date-fns/locale/pt';
 import { View, Text, Animated, TouchableOpacity, TouchableHighlight, ScrollView, Dimensions, PanResponder, Platform } from 'react-native'
 
 import defaultStyles from './calendarStyles'
@@ -222,7 +223,7 @@ class Calendar extends React.Component {
     const nextArrow = this.props.nextArrow || <Text>{'>'}</Text>
     return <View style={{flexDirection: 'row'}}>
       {showArrows && <TouchableHighlight onPress={this.prevMonth} style={styles.headerNavigation}>{prevArrow}</TouchableHighlight>}
-      <Text style={styles.headerTitle}>{dateFns.format(currentDate || this.state.currentDate, this.state.headerDateFormat)}</Text>
+      <Text style={styles.headerTitle}>{dateFns.format(currentDate || this.state.currentDate, this.state.headerDateFormat, { locale: pt })}</Text>
       {showArrows && <TouchableHighlight onPress={this.nextMonth} style={styles.headerNavigation}>{nextArrow}</TouchableHighlight>}
     </View>
   }
@@ -245,7 +246,7 @@ class Calendar extends React.Component {
     for (let i = 0; i < 7; i++) {
       days.push(
         <Text key={i} style={styles.weekDay}>
-          {dateFns.format(dateFns.addDays(startDate, i), 'dd')}
+          {dateFns.format(dateFns.addDays(startDate, i), 'ddd', { locale: pt })}
         </Text>
       );
     }

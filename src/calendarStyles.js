@@ -7,26 +7,32 @@ export default StyleSheet.create({
     flex: 1,
   },
   calendar: {
-    backgroundColor: '#fff',
-    borderBottomColor: '#ccc',
-    borderBottomWidth: 1,
-    zIndex: 1
+    backgroundColor: '#1A1A1A',
+    paddingVertical: 20
   },
   headerTitle: {
     alignContent: 'center',
     textAlign: 'center',
-    flex: 1
+    flex: 1,
+    marginBottom: 15,
+    fontFamily: "RobotoMedium",
+    fontSize: 16,
+    color: "#D0D0D0",
+    textTransform: 'capitalize'
   },
   headerNavigation: {
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   weekDays: {
     paddingVertical: 5,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   weekDay: {
     textAlign: 'center',
-    flex: 1
+    flex: 1,
+    color: "#FAFAFA",
+    fontFamily: "RobotoRegular",
+    textTransform: 'capitalize'
   },
   week: {
     flexDirection: 'row'
@@ -34,8 +40,11 @@ export default StyleSheet.create({
   day: {
     flex: 1,
     position: 'relative',
-    paddingVertical: 7,
-    borderRadius: 7
+    paddingVertical: 14,
+    paddingHorizontal: 4,
+    borderRadius: 7,
+    backgroundColor: "#232323",
+    marginHorizontal: 5,
   },
   dayTextWrapper: {
     justifyContent: 'center',
@@ -43,6 +52,9 @@ export default StyleSheet.create({
   },
   dayText: {
     textAlign: 'center',
+    color: "#FAFAFA",
+    fontFamily: "RobotoBold",
+    fontSize: 16
   },
   dayDisabled: {
     flex: 1,
@@ -51,26 +63,29 @@ export default StyleSheet.create({
   },
   dayDisabledText: {
     textAlign: 'center',
-    color: '#ccc'
+    color: '#727272',
+    fontFamily: "RobotoBold",
+    fontSize: 16
   },
   daySelected: {
     flex: 1,
     paddingVertical: 7,
     borderRadius: 7,
-    backgroundColor: 'skyblue',
+    borderWidth: 1,
+    borderColor: '#DFBFF9'
   },
   daySelectedText: {
     textAlign: 'center',
   },
   expander: {
-    backgroundColor: 'skyblue',
+    backgroundColor: '#DFBFF9',
     width: 50,
     height: 4,
     borderRadius: 2,
     margin: 5
   },
   expanderAndroid: {
-    borderColor: 'skyblue',
+    borderColor: '#DFBFF9',
     width: 40,
     height: 17,
   },
@@ -78,7 +93,7 @@ export default StyleSheet.create({
     height: 1.5,
     marginVertical: 4,
     marginHorizontal: 6,
-    backgroundColor: 'skyblue'
+    backgroundColor: '#DFBFF9'
   },
   expanderWrapper: {
     borderColor: 'transparent',
@@ -88,13 +103,13 @@ export default StyleSheet.create({
   },
   dayItem: {
     position: 'absolute',
-    bottom: -4,
+    bottom: -8, 
     width: 4,
     height: 4,
     borderRadius: 2,
-    backgroundColor: 'skyblue'
+    backgroundColor: '#7C14B8'
   },
-  agendaWrapper: {
-    backgroundColor: '#fff'
-  }
+  // agendaWrapper: {
+  //   backgroundColor: '#fff'
+  // }
 })
