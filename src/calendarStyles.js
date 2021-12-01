@@ -8,7 +8,8 @@ export default StyleSheet.create({
   },
   calendar: {
     backgroundColor: '#1A1A1A',
-    paddingVertical: 20
+    paddingVertical: 10,
+    height: 150
   },
   headerTitle: {
     alignContent: 'center',
